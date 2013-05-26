@@ -1,0 +1,18 @@
+{
+    "version": "0.1",
+    "name": "Clock patience",
+    "description": "Play clock patience",
+    "launch_path": "/index.html",
+    "icons": {
+        "128": "/img/icons/clockp-128.png"
+    },
+    "developer": {
+        "name": "Ben Boyle",
+        "url": "http://ultimate.benboyle.id.au/"
+    },
+    "installs_allowed_from": ["*"],
+    "default_locale": "en",
+    "permissions": {
+        "systemXHR": {}
+    }
+}
