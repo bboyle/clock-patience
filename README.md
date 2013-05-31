@@ -35,3 +35,4 @@ What I've learned
 | Week | Notes                                                                                                                          |
 |-----:|:-------------------------------------------------------------------------------------------------------------------------------|
 |    1 | It's easy to make a Firefox OS app (way easier than a Firefox extension). Also, there are css at-rules for device orientation! |
+|    2 | Drag and drop. There's more to it than you would initially think.                                                              |

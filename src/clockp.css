@@ -1,3 +1,31 @@
+/* cards */
+
+.card {
+	border: 1px solid #777;
+	border-radius: 3px;
+	color: #333;
+	background: #fff;
+	height: 3.5em;
+	width: 2.5em;
+	box-shadow: .25em .25em .5em #000;
+	overflow: hidden;
+	margin: 1em;
+}
+.clubs, .spades {
+	border-color: #000;
+}
+.hearts, .diamonds {
+	border-color: #f00;
+}
+
+/* drag and drop */
+[draggable]:hover {
+	cursor: move;
+	cursor: -moz-grab;
+}
+
+
+
 /* The following are examples of different CSS media queries */
 
 /* Basic desktop/screen width sniff */
@@ -7,6 +35,7 @@
 		background: #0ff;
 	}
 }
+
 
 /* Traditional iPhone width */
 @media
