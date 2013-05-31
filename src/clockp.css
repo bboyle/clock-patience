@@ -23,6 +23,29 @@
 	cursor: move;
 	cursor: -moz-grab;
 }
+[draggable]:active {
+	cursor: -moz-grabbing;
+	animation-duration: 100ms;
+	animation-name: pickup;
+	transform: rotate( -10deg );
+}
+/* being dragged */
+.card.dragging {
+	opacity: .4;
+}
+
+
+/* pick up card animation */
+@keyframes pickup {
+	from {
+	}
+	80% {
+		font-size: 130%;
+	}
+	100% {
+		font-size: 110%;
+	}
+}
 
 
 
