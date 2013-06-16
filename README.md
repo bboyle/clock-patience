@@ -20,11 +20,14 @@ TODO
 ----
 
 * UI design
-* build system
+  * -clock layout-
+  * -symbols for suits (use Unicode)-
+  * [cicada background](http://designfestival.com/the-cicada-principle-and-why-it-matters-to-web-designers/) for card backs/playing surface
+  * flip over card (3D transform?)
+* build system (grunt and compass)
 * QA: syntax checking and tests
-* drag and drop cards
-* ~display clock layout~
-* enforcing rules should be optional (drag and drop)
+* drag and drop cards (partial)
+* enforcing rules should be optional, play how you like
 * auto play (like a cruise control)
 
 
