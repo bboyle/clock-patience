@@ -3,6 +3,7 @@ body {
 	overflow: hidden;
 }
 
+
 table {
 	table-layout: fixed;
 	width: 100%;
@@ -118,11 +119,11 @@ td:nth-child( 12 ) {
 	transform: rotate( 0 );
 }
 td:nth-child( 13 ) {
-	-webkit-transform: none;
-	-ms-transform: none;
-	-moz-transform: none;
-	-o-transform: none;
-	transform: none;
+	-webkit-transform: translateY( 12.5em );
+	-ms-transform: translateY( 12.5em );
+	-moz-transform: translateY( 12.5em );
+	-o-transform: translateY( 12.5em );
+	transform: translateY( 12.5em );
 	-webkit-transform-origin: 50% 50%;
 	-ms-transform-origin: 50% 50%;
 	-moz-transform-origin: 50% 50%;
