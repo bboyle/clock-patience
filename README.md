@@ -23,10 +23,9 @@ TODO
 * build system
 * QA: syntax checking and tests
 * drag and drop cards
-* display clock layout
-* enforce rules should be optional (drag and drop)
+* ~display clock layout~
+* enforcing rules should be optional (drag and drop)
 * auto play (like a cruise control)
-* support 'Watch' variation
 
 
 What I've learned
@@ -36,3 +35,5 @@ What I've learned
 |-----:|:-------------------------------------------------------------------------------------------------------------------------------|
 |    1 | It's easy to make a Firefox OS app (way easier than a Firefox extension). Also, there are css at-rules for device orientation! |
 |    2 | Drag and drop. There's more to it than you would initially think.                                                              |
+|    3 | Implemented drag and drop, but in a separate project. Thinking of switching to jQuery UI `draggable` and `droppable`.          |
+|    4 | CSS3 transforms for the clock patience layout. Takes a 12 column table and rotates each cell into a clock shape.               |
