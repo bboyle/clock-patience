@@ -1,5 +1,97 @@
-/* cards */
+body {
+	font-size: 1.5em;
+	overflow: hidden;
+}
 
+
+table {
+	table-layout: fixed;
+	width: 100%;
+	transform: translateX( 50% );
+}
+thead {
+	display: none;
+}
+
+/* table cell = space to drop a card */
+td {
+	border: 1px solid rgba( 255, 255, 255, .8 );
+	border-radius: 3px;
+	color: #333;
+	background: rgba( 255, 255, 255, .5 );
+	padding: .5em;
+	height: 3.5em;
+	width: 2.5em;
+	overflow: hidden;
+}
+/* overlap the rows */
+tbody > tr {
+	/*position: absolute;*/
+}
+/* rotate the table cells to create a clock layout */
+td {
+	position: absolute;
+	-webkit-transform-origin: 50% 15em;
+	transform-origin: 50% 15em;
+}
+td:nth-child( 1 ) {
+	-webkit-transform: rotate( 30deg );
+	transform: rotate( 30deg );
+}
+td:nth-child( 2 ) {
+	-webkit-transform: rotate( 60deg );
+	transform: rotate( 60deg );
+}
+td:nth-child( 3 ) {
+	-webkit-transform: rotate( 90deg );
+	transform: rotate( 90deg );
+}
+td:nth-child( 4 ) {
+	-webkit-transform: rotate( 120deg );
+	transform: rotate( 120deg );
+}
+td:nth-child( 5 ) {
+	-webkit-transform: rotate( 150deg );
+	transform: rotate( 150deg );
+}
+td:nth-child( 6 ) {
+	-webkit-transform: rotate( 180deg );
+	transform: rotate( 180deg );
+}
+td:nth-child( 7 ) {
+	-webkit-transform: rotate( 210deg );
+	transform: rotate( 210deg );
+}
+td:nth-child( 8 ) {
+	-webkit-transform: rotate( 240deg );
+	transform: rotate( 240deg );
+}
+td:nth-child( 9 ) {
+	-webkit-transform: rotate( 270deg );
+	transform: rotate( 270deg );
+}
+td:nth-child( 10 ) {
+	-webkit-transform: rotate( 300deg );
+	transform: rotate( 300deg );
+}
+td:nth-child( 11 ) {
+	-webkit-transform: rotate( 330deg );
+	transform: rotate( 330deg );
+}
+/* note: Queen (12) stays put */
+td:nth-child( 12 ) {
+	-webkit-transform: rotate( 0 );
+	transform: rotate( 0 );
+}
+td:nth-child( 13 ) {
+	-webkit-transform: none;
+	transform: none;
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+
+
+/* cards */
 .card {
 	border: 1px solid #777;
 	border-radius: 3px;
@@ -13,10 +105,13 @@
 }
 .clubs, .spades {
 	border-color: #000;
+	color: #000;
 }
 .hearts, .diamonds {
-	border-color: #f00;
+	border-color: #d40000;
+	color: #d40000;
 }
+
 
 /* drag and drop */
 [draggable]:hover {
