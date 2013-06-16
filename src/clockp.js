@@ -1,4 +1,4 @@
-function handleDragStart( e ) {
+function handleDragStart() {
 	this.classList.add( 'dragging' );
 }
 

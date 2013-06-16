@@ -1,4 +1,6 @@
-function handleDragStart( e ) {
+/*! Clock patience - v0.0.3 - 2013-06-16
+* Copyright (c) 2013 ; Licensed  */
+function handleDragStart() {
 	this.classList.add( 'dragging' );
 }
 

@@ -1,0 +1,27 @@
+{
+  "name": "clockp",
+  "title": "Clock patience",
+  "version": "0.0.3",
+  "description": "Clock Patience web app",
+  "main": "grunt.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "grunt-rcukes": "0.0.4",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-concat": "~0.1.3",
+    "grunt-contrib-watch": "~0.3.1",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.3.0",
+    "grunt-contrib-csslint": "~0.1.1",
+    "grunt-contrib-compass": "~0.1.3"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": "",
+  "author": "Ben Boyle",
+  "license": "MIT"
+}

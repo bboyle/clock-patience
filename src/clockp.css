@@ -24,69 +24,110 @@ td {
 	width: 2.5em;
 	overflow: hidden;
 }
-/* overlap the rows */
-tbody > tr {
-	/*position: absolute;*/
-}
 /* rotate the table cells to create a clock layout */
 td {
 	position: absolute;
 	-webkit-transform-origin: 50% 15em;
+	-ms-transform-origin: 50% 15em;
+	-moz-transform-origin: 50% 15em;
+	-o-transform-origin: 50% 15em;
 	transform-origin: 50% 15em;
 }
 td:nth-child( 1 ) {
 	-webkit-transform: rotate( 30deg );
+	-ms-transform: rotate( 30deg );
+	-moz-transform: rotate( 30deg );
+	-o-transform: rotate( 30deg );
 	transform: rotate( 30deg );
 }
 td:nth-child( 2 ) {
 	-webkit-transform: rotate( 60deg );
+	-ms-transform: rotate( 60deg );
+	-moz-transform: rotate( 60deg );
+	-o-transform: rotate( 60deg );
 	transform: rotate( 60deg );
 }
 td:nth-child( 3 ) {
 	-webkit-transform: rotate( 90deg );
+	-ms-transform: rotate( 90deg );
+	-moz-transform: rotate( 90deg );
+	-o-transform: rotate( 90deg );
 	transform: rotate( 90deg );
 }
 td:nth-child( 4 ) {
 	-webkit-transform: rotate( 120deg );
+	-ms-transform: rotate( 120deg );
+	-moz-transform: rotate( 120deg );
+	-o-transform: rotate( 120deg );
 	transform: rotate( 120deg );
 }
 td:nth-child( 5 ) {
 	-webkit-transform: rotate( 150deg );
+	-ms-transform: rotate( 150deg );
+	-moz-transform: rotate( 150deg );
+	-o-transform: rotate( 150deg );
 	transform: rotate( 150deg );
 }
 td:nth-child( 6 ) {
 	-webkit-transform: rotate( 180deg );
+	-ms-transform: rotate( 180deg );
+	-moz-transform: rotate( 180deg );
+	-o-transform: rotate( 180deg );
 	transform: rotate( 180deg );
 }
 td:nth-child( 7 ) {
 	-webkit-transform: rotate( 210deg );
+	-ms-transform: rotate( 210deg );
+	-moz-transform: rotate( 210deg );
+	-o-transform: rotate( 210deg );
 	transform: rotate( 210deg );
 }
 td:nth-child( 8 ) {
 	-webkit-transform: rotate( 240deg );
+	-ms-transform: rotate( 240deg );
+	-moz-transform: rotate( 240deg );
+	-o-transform: rotate( 240deg );
 	transform: rotate( 240deg );
 }
 td:nth-child( 9 ) {
 	-webkit-transform: rotate( 270deg );
+	-ms-transform: rotate( 270deg );
+	-moz-transform: rotate( 270deg );
+	-o-transform: rotate( 270deg );
 	transform: rotate( 270deg );
 }
 td:nth-child( 10 ) {
 	-webkit-transform: rotate( 300deg );
+	-ms-transform: rotate( 300deg );
+	-moz-transform: rotate( 300deg );
+	-o-transform: rotate( 300deg );
 	transform: rotate( 300deg );
 }
 td:nth-child( 11 ) {
 	-webkit-transform: rotate( 330deg );
+	-ms-transform: rotate( 330deg );
+	-moz-transform: rotate( 330deg );
+	-o-transform: rotate( 330deg );
 	transform: rotate( 330deg );
 }
 /* note: Queen (12) stays put */
 td:nth-child( 12 ) {
 	-webkit-transform: rotate( 0 );
+	-ms-transform: rotate( 0 );
+	-moz-transform: rotate( 0 );
+	-o-transform: rotate( 0 );
 	transform: rotate( 0 );
 }
 td:nth-child( 13 ) {
 	-webkit-transform: none;
+	-ms-transform: none;
+	-moz-transform: none;
+	-o-transform: none;
 	transform: none;
 	-webkit-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-o-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
 }
 
@@ -114,11 +155,11 @@ td:nth-child( 13 ) {
 
 
 /* drag and drop */
-[draggable]:hover {
+.card:hover {
 	cursor: move;
 	cursor: -moz-grab;
 }
-[draggable]:active {
+.card:active {
 	cursor: -moz-grabbing;
 	animation-duration: 100ms;
 	animation-name: pickup;
