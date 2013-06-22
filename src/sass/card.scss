@@ -1,0 +1,54 @@
+$redSuit: #d40000;
+$blackSuit: #000;
+
+
+/* cards */
+.card {
+	border: 1px solid #777;
+	border-radius: 3px;
+	color: #333;
+	background: #fff;
+	height: 3.5em;
+	width: 2.5em;
+	box-shadow: .25em .25em .5em #000;
+	overflow: hidden;
+	margin: 1em;
+}
+.clubs, .spades {
+	border-color: $blackSuit;
+	color: $blackSuit;
+}
+.hearts, .diamonds {
+	border-color: $redSuit;
+	color: $redSuit;
+}
+
+
+/* drag and drop */
+.card:hover {
+	cursor: move;
+	cursor: -moz-grab;
+}
+.card:active {
+	cursor: -moz-grabbing;
+	animation-duration: 100ms;
+	animation-name: pickup;
+	transform: rotate( -10deg );
+}
+/* being dragged */
+.card.dragging {
+	opacity: .4;
+}
+
+
+/* pick up card animation */
+@keyframes pickup {
+	from {
+	}
+	80% {
+		font-size: 130%;
+	}
+	100% {
+		font-size: 110%;
+	}
+}

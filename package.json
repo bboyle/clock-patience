@@ -1,7 +1,11 @@
 {
   "name": "clockp",
   "title": "Clock patience",
-  "version": "0.0.3",
+  "version": "0.0.5",
+  "author": {
+    "name": "Ben Boyle"
+  },
+  "homepage": "https://github.com/bboyle/clock-patience",
   "description": "Clock Patience web app",
   "main": "grunt.js",
   "directories": {
@@ -21,7 +25,14 @@
   "scripts": {
     "test": "grunt test"
   },
-  "repository": "",
-  "author": "Ben Boyle",
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bboyle/clock-patience.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/bboyle/Generate-ID/blob/master/LICENSE-MIT"
+    }
+  ]
 }

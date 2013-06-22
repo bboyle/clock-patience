@@ -41,3 +41,4 @@ What I've learned
 |    2 | Drag and drop. There's more to it than you would initially think.                                                              |
 |    3 | Implemented drag and drop, but in a separate project. Thinking of switching to jQuery UI `draggable` and `droppable`.          |
 |    4 | CSS3 transforms for the clock patience layout. Takes a 12 column table and rotates each cell into a clock shape.               |
+|    5 | Initial SASS (scss) support using compass (via grunt) to compile stylesheets. I used sass variables for the suit colours.      |

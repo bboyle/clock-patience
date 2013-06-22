@@ -13,7 +13,7 @@ module.exports = function( grunt ) {
 			' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
 		// Task configuration.
 		clean: {
-			files: [ 'dist' ]
+			build: [ 'build' ]
 		},
 		// production pipeline tasks
 		concat: {
@@ -21,9 +21,17 @@ module.exports = function( grunt ) {
 				banner: '<%= banner %>',
 				stripBanners: true
 			},
-			dist: {
+			js: {
 				src: [ 'src/<%= pkg.name %>.js' ],
 				dest: 'app/js/<%= pkg.name %>.js'
+			},
+			css: {
+				src: [
+					'build/css/init.css',
+					'build/css/clock-layout.css',
+					'build/css/card.css'
+				],
+				dest: 'app/css/<%= pkg.name %>.css'
 			},
 		},
 		uglify: {
@@ -35,13 +43,22 @@ module.exports = function( grunt ) {
 				dest: 'app/js/<%= pkg.name %>.js'
 			},
 		},
+		compass: {
+			src: {
+				options: {
+					sassDir: 'src/sass',
+					cssDir: 'build/css',
+					environment: 'production'
+				}
+			}
+		},
 		// code quality tasks
 		csslint: {
 			src: {
 				options: {
 					csslintrc: 'src/.csslintrc'
 				},
-				src: [ 'src/**/*.css' ]
+				src: [ 'build/**/*.css' ]
 			},
 			app: {
 				options: {
@@ -80,8 +97,8 @@ module.exports = function( grunt ) {
 				tasks: [ 'jshint:src' ]
 			},
 			srcCss: {
-				files: '<%= csslint.src.src %>',
-				tasks: [ 'csslint:src' ]
+				files: 'src/sass/*.scss',
+				tasks: [ 'compass', 'csslint:src' ]
 			},
 			appJs: {
 				files: '<%= jshint.app.src %>',
@@ -98,15 +115,17 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-clean' );
 	grunt.loadNpmTasks( 'grunt-contrib-concat' );
 	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
+	grunt.loadNpmTasks( 'grunt-contrib-compass' );
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
-	grunt.loadNpmTasks('grunt-contrib-csslint');
+	grunt.loadNpmTasks( 'grunt-contrib-csslint' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 
 	// Default task.
+	grunt.registerTask( 'compile', [ 'clean', 'compass' ]);
 	grunt.registerTask( 'test', [ 'csslint', 'jshint' ]);
-	grunt.registerTask( 'produce', [ 'clean', 'concat' ]);
+	grunt.registerTask( 'produce', [ 'concat' ]);
 	// TODO uglify and pass jshint
 	grunt.registerTask( 'quality-control', [ 'csslint:app', 'jshint:app' ]);
-	grunt.registerTask( 'default', [ 'test', 'produce', 'quality-control' ]);
+	grunt.registerTask( 'default', [ 'compile', 'test', 'produce', 'quality-control' ]);
 
 };

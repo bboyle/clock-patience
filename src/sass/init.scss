@@ -1,0 +1,40 @@
+body {
+	font-size: 1.5em;
+	overflow: hidden;
+}
+
+
+/* The following are examples of different CSS media queries */
+
+/* Basic desktop/screen width sniff */
+@media only screen and (min-width : 1224px) {
+	/* styles */
+	body {
+		background: #0ff;
+	}
+}
+
+
+/* Traditional iPhone width */
+@media
+	only screen and (-webkit-min-device-pixel-ratio : 1.5),
+	only screen and (min-device-pixel-ratio : 1.5) {
+	/* styles */
+	body {
+		background: yellow;
+	}
+}
+
+/* Device settings at different orientations */
+@media screen and (orientation:portrait) {
+	/* styles */
+	body {
+		background: green;
+	}
+}
+@media screen and (orientation:landscape) {
+	/* styles */
+	body {
+		background: blue;
+	}
+}
