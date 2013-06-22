@@ -44,7 +44,16 @@ module.exports = function( grunt ) {
 			},
 		},
 		compass: {
+			// TODO compass concat
+			// http://stackoverflow.com/questions/9293646/can-compass-merge-css-files
 			src: {
+				options: {
+					sassDir: 'src/sass',
+					cssDir: 'build/css',
+					environment: 'development'
+				}
+			},
+			app: {
 				options: {
 					sassDir: 'src/sass',
 					cssDir: 'build/css',
@@ -121,9 +130,9 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 
 	// Default task.
-	grunt.registerTask( 'compile', [ 'clean', 'compass' ]);
+	grunt.registerTask( 'compile', [ 'clean', 'compass:src' ]);
 	grunt.registerTask( 'test', [ 'csslint', 'jshint' ]);
-	grunt.registerTask( 'produce', [ 'concat' ]);
+	grunt.registerTask( 'produce', [ 'clean', 'compass:app', 'concat' ]);
 	// TODO uglify and pass jshint
 	grunt.registerTask( 'quality-control', [ 'csslint:app', 'jshint:app' ]);
 	grunt.registerTask( 'default', [ 'compile', 'test', 'produce', 'quality-control' ]);
