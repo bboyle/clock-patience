@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+.club.ace::before,
+.club.ace::after {
+	content: "A♣";
+}
+.club.two::before,
+.club.two::after {
+	content: "2♣";
+}
+.club.three::before,
+.club.three::after {
+	content: "3♣";
+}
+.club.four::before,
+.club.four::after {
+	content: "4♣";
+}
+.club.five::before,
+.club.five::after {
+	content: "5♣";
+}
+.club.six::before,
+.club.six::after {
+	content: "6♣";
+}
+.club.seven::before,
+.club.seven::after {
+	content: "7♣";
+}
+.club.eight::before,
+.club.eight::after {
+	content: "8♣";
+}
+.club.nine::before,
+.club.nine::after {
+	content: "9♣";
+}
+.club.ten::before,
+.club.ten::after {
+	content: "10♣";
+}
+.club.jack::before,
+.club.jack::after {
+	content: "J♣";
+}
+.club.queen::before,
+.club.queen::after {
+	content: "Q♣";
+}
+.club.king::before,
+.club.king::after {
+	content: "K♣";
+}

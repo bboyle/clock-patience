@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+.diamond.ace::before,
+.diamond.ace::after {
+	content: "A♦";
+}
+.diamond.two::before,
+.diamond.two::after {
+	content: "2♦";
+}
+.diamond.three::before,
+.diamond.three::after {
+	content: "3♦";
+}
+.diamond.four::before,
+.diamond.four::after {
+	content: "4♦";
+}
+.diamond.five::before,
+.diamond.five::after {
+	content: "5♦";
+}
+.diamond.six::before,
+.diamond.six::after {
+	content: "6♦";
+}
+.diamond.seven::before,
+.diamond.seven::after {
+	content: "7♦";
+}
+.diamond.eight::before,
+.diamond.eight::after {
+	content: "8♦";
+}
+.diamond.nine::before,
+.diamond.nine::after {
+	content: "9♦";
+}
+.diamond.ten::before,
+.diamond.ten::after {
+	content: "10♦";
+}
+.diamond.jack::before,
+.diamond.jack::after {
+	content: "J♦";
+}
+.diamond.queen::before,
+.diamond.queen::after {
+	content: "Q♦";
+}
+.diamond.king::before,
+.diamond.king::after {
+	content: "K♦";
+}

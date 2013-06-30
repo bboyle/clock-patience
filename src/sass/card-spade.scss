@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+.spade.ace::before,
+.spade.ace::after {
+	content: "A♠";
+}
+.spade.two::before,
+.spade.two::after {
+	content: "2♠";
+}
+.spade.three::before,
+.spade.three::after {
+	content: "3♠";
+}
+.spade.four::before,
+.spade.four::after {
+	content: "4♠";
+}
+.spade.five::before,
+.spade.five::after {
+	content: "5♠";
+}
+.spade.six::before,
+.spade.six::after {
+	content: "6♠";
+}
+.spade.seven::before,
+.spade.seven::after {
+	content: "7♠";
+}
+.spade.eight::before,
+.spade.eight::after {
+	content: "8♠";
+}
+.spade.nine::before,
+.spade.nine::after {
+	content: "9♠";
+}
+.spade.ten::before,
+.spade.ten::after {
+	content: "10♠";
+}
+.spade.jack::before,
+.spade.jack::after {
+	content: "J♠";
+}
+.spade.queen::before,
+.spade.queen::after {
+	content: "Q♠";
+}
+.spade.king::before,
+.spade.king::after {
+	content: "K♠";
+}

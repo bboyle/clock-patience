@@ -1,8 +1,14 @@
+@charset "UTF-8";
+@import "card-heart.scss";
+@import "card-diamond.scss";
+@import "card-club.scss";
+@import "card-spade.scss";
+
+
 $redSuit: #d40000;
 $blackSuit: #000;
 $cardBackground: #fff;
 // TODO allow for yellow, green styles for spades and clubs?
-
 
 /* cards */
 .card {
@@ -45,14 +51,43 @@ $cardBackground: #fff;
 }
 
 
-// aces
+// 1 large symbol
 .ace {
 	line-height: 1.5;
 }
 .ace > abbr {
 	font-size: 2em;
 }
+// 2 symbols
+.two {
+	line-height: 1.5;
+}
+// 4 rows of suits symbols
+.nine, .ten {
+	line-height: .7;
+}
 
+
+// card shorthand
+.card::before,
+.card::after {
+	content: none;
+	font-size: .4em;
+	width: 1em;
+	padding: .1em;
+	position: absolute;
+	word-wrap: break-word;
+	line-height: 1;
+}
+.card::before {
+	top: 0;
+	left: 0;
+}
+.card::after {
+	bottom: 0;
+	right: 0;
+	transform: rotate(180deg);
+}
 
 
 /* drag and drop */

@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+.heart.ace::before,
+.heart.ace::after {
+	content: "A♥";
+}
+.heart.two::before,
+.heart.two::after {
+	content: "2♥";
+}
+.heart.three::before,
+.heart.three::after {
+	content: "3♥";
+}
+.heart.four::before,
+.heart.four::after {
+	content: "4♥";
+}
+.heart.five::before,
+.heart.five::after {
+	content: "5♥";
+}
+.heart.six::before,
+.heart.six::after {
+	content: "6♥";
+}
+.heart.seven::before,
+.heart.seven::after {
+	content: "7♥";
+}
+.heart.eight::before,
+.heart.eight::after {
+	content: "8♥";
+}
+.heart.nine::before,
+.heart.nine::after {
+	content: "9♥";
+}
+.heart.ten::before,
+.heart.ten::after {
+	content: "10♥";
+}
+.heart.jack::before,
+.heart.jack::after {
+	content: "J♥";
+}
+.heart.queen::before,
+.heart.queen::after {
+	content: "Q♥";
+}
+.heart.king::before,
+.heart.king::after {
+	content: "K♥";
+}
