@@ -1,27 +1,58 @@
 $redSuit: #d40000;
 $blackSuit: #000;
+$cardBackground: #fff;
+// TODO allow for yellow, green styles for spades and clubs?
 
 
 /* cards */
 .card {
+	position: relative;
 	border: 1px solid #777;
 	border-radius: 3px;
 	color: #333;
-	background: #fff;
-	height: 3.5em;
-	width: 2.5em;
-	box-shadow: .25em .25em .5em #000;
+	background: #fff inline-image("image/playing-card.svg");
+	background-size: cover;
+	height: 3em;
+	width: 2em;
+	line-height: 1;
+	text-align: center;
+	vertical-align: middle;
+	// box-shadow: .25em .25em .5em #000;
 	overflow: hidden;
-	margin: 1em;
+	// margin: 1em;
+	padding: .25em;
+	// most cards follow a 3 column layout
+	// -moz-column-width: .667em;
+	// -moz-column-count: 3;
+	// -moz-column-rule: medium;
 }
-.clubs, .spades {
+
+.card > abbr {
+	border-bottom: none;
+	font-size: .8em;
+}
+
+// suits
+.club, .spade {
+	background: $cardBackground;
 	border-color: $blackSuit;
 	color: $blackSuit;
 }
-.hearts, .diamonds {
+.heart, .diamond {
+	background: $cardBackground;
 	border-color: $redSuit;
 	color: $redSuit;
 }
+
+
+// aces
+.ace {
+	line-height: 1.5;
+}
+.ace > abbr {
+	font-size: 2em;
+}
+
 
 
 /* drag and drop */

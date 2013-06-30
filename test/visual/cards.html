@@ -2,16 +2,56 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Clock patience</title>
+	<title>Cards · Clock patience</title>
 	<meta name="viewport" content="width=device-width">
 
-	<link rel="stylesheet" href="css/clockp.css">
+	<link rel="stylesheet" href="../../build/css/card.css">
+	<style type="text/css">
+		body {
+			background: #efe;
+		}
+		.preview {
+			font-size: 3em;
+			border-spacing: .2em;
+		}
+
+		.card {
+			-moz-column-width: .667em;
+			-moz-column-count: 3;
+			-moz-column-rule: medium;
+		}
+
+		.two {
+			line-height: 1.5;
+		}
+		.nine, .ten {
+			line-height: .7;
+		}
+
+		.card::before {
+			content: "A♥";
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: red;
+			z-index: 2;
+		}
+		.card::after {
+			content: "A♥";
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			background: red;
+			z-index: 2;
+		}
+
+	</style>
 </head>
 <body>
 
-	<h1>Clock patience</h1>
+	<h1>Cards</h1>
 
-	<table>
+	<table class="preview">
 		<thead>
 			<tr>
 				<th><abbr title="Ace">A</abbr></th>
@@ -40,7 +80,8 @@
 				<td><div class="card seven heart"><abbr title="Seven of Hearts">♥ ♥ ♥ ♥ ♥ ♥ ♥</abbr></div></td>
 				<td><div class="card eight heart"><abbr title="Eight of Hearts">♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥</abbr></div></td>
 				<td><div class="card nine heart"><abbr title="Nine of Hearts">♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥</abbr></div></td>
-				<td><div class="card ten heart"><abbr title="Ten of Hearts">♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥</abbr></div></td>
+				<!-- <td><div class="card ten heart"><abbr title="Ten of Hearts">♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥</abbr></div></td> -->
+				<td><div class="card ten heart"><abbr title="Ten of Hearts">1 2 3 4 5 6 7 8 9 0</abbr></div></td>
 				<td><div class="card jack heart"><abbr title="Jack of Hearts">J♥</abbr></div></td>
 				<td><div class="card queen heart"><abbr title="Queen of Hearts">Q♥</abbr></div></td>
 				<td><div class="card king heart"><abbr title="King of Hearts">K♥</abbr></div></td>
@@ -90,11 +131,24 @@
 				<td><div class="card queen spade"><abbr title="Queen of Spades">Q♠</abbr></div></td>
 				<td><div class="card king spade"><abbr title="King of Spades">K♠</abbr></div></td>
 			</tr>
+			<tr>
+				<td><div class="card"></div></td>
+				<td><div class="card"></div></td>
+				<td><div class="card"></div></td>
+				<td><div class="card"></div></td>
+				<td><div class="card"></div></td>
+				<td><div class="card"></div></td>
+				<td><div class="card"></div></td>
+				<td><div class="card"></div></td>
+				<td><div class="card"></div></td>
+				<td><div class="card"></div></td>
+				<td><div class="card"></div></td>
+				<td><div class="card"></div></td>
+				<td><div class="card"></div></td>
+			</tr>
 		</tbody>
 	</table>
 
-
-	<script src="js/clockp.js"></script>
 
 </body>
 </html>
