@@ -28,6 +28,7 @@ module.exports = function( grunt ) {
 			css: {
 				src: [
 					'build/css/init.css',
+					'build/css/playing-surface.css',
 					'build/css/clock-layout.css',
 					'build/css/card.css'
 				],
@@ -50,6 +51,7 @@ module.exports = function( grunt ) {
 				options: {
 					sassDir: 'src/sass',
 					cssDir: 'build/css',
+					imagesDir: 'src/sass',
 					environment: 'development'
 				}
 			},
@@ -107,7 +109,7 @@ module.exports = function( grunt ) {
 			},
 			srcCss: {
 				files: 'src/sass/*.scss',
-				tasks: [ 'compass', 'csslint:src' ]
+				tasks: [ 'compass:src', 'csslint:src' ]
 			},
 			appJs: {
 				files: '<%= jshint.app.src %>',
