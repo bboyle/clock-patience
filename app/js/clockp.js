@@ -1,4 +1,4 @@
-/*! Clock patience - v0.0.5 - 2013-06-22
+/*! Clock patience - v0.0.5 - 2013-09-23
 * https://github.com/bboyle/clock-patience
 * Copyright (c) 2013 Ben Boyle; Licensed MIT */
 function handleDragStart() {

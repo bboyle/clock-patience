@@ -1,0 +1,101 @@
+table {
+	table-layout: fixed;
+	width: 100%;
+}
+
+/*
+	TH show where to drop cards
+	Cards are actually dropped in individual TD cells
+	but the cells have no border or background
+*/
+th, td {
+	border-radius: 3px;
+	border: 1px dashed rgba( 255, 255, 255, .5 );
+	color: #333;
+	padding: .5em;
+	height: 3.5em;
+	width: 2.5em;
+	overflow: hidden;
+	text-align: center;
+}
+th {
+	background: rgba( 255, 255, 255, .1 );
+	color: rgba( 255, 255, 255, .5 );
+}
+
+
+// clock layout
+.clock {
+	@include translateX( 50% );
+
+	td, th {
+		position: absolute;
+		// Chrome needs 50% 15em 0 50%
+		// Firefox needs 50% 15em
+		-webkit-transform-origin: 50% 15em 0 true;
+		-moz-transform-origin: 50% 15em;
+		-ms-transform-origin: 50% 15em 0 true;
+		-o-transform-origin: 50% 15em 0 true;
+		transform-origin: 50% 15em 0 true;
+	}
+
+	td {
+		border: none;
+	}
+
+	// rotate the table cells to create a clock layout
+	th:nth-child( 1 ),
+	td:nth-child( 1 ) {
+		@include rotate( 30deg );
+	}
+	th:nth-child( 2 ),
+	td:nth-child( 2 ) {
+		@include rotate( 60deg );
+	}
+	th:nth-child( 3 ),
+	td:nth-child( 3 ) {
+		@include rotate( 90deg );
+	}
+	th:nth-child( 4 ),
+	td:nth-child( 4 ) {
+		@include rotate( 120deg );
+	}
+	th:nth-child( 5 ),
+	td:nth-child( 5 ) {
+		@include rotate( 150deg );
+	}
+	th:nth-child( 6 ),
+	td:nth-child( 6 ) {
+		@include rotate( 180deg );
+	}
+	th:nth-child( 7 ),
+	td:nth-child( 7 ) {
+		@include rotate( 210deg );
+	}
+	th:nth-child( 8 ),
+	td:nth-child( 8 ) {
+		@include rotate( 240deg );
+	}
+	th:nth-child( 9 ),
+	td:nth-child( 9 ) {
+		@include rotate( 270deg );
+	}
+	th:nth-child( 10 ),
+	td:nth-child( 10 ) {
+		@include rotate( 300deg );
+	}
+	th:nth-child( 11 ),
+	td:nth-child( 11 ) {
+		@include rotate( 330deg );
+	}
+	/* note: Queen (12) stays put */
+	th:nth-child( 12 ),
+	td:nth-child( 12 ) {
+		@include rotate( 0 );
+	}
+	th:nth-child( 13 ),
+	td:nth-child( 13 ) {
+		@include translateY( 12.5em );
+		@include transform-origin( 50% 50% );
+	}
+}

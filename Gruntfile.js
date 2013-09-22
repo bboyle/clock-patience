@@ -22,17 +22,8 @@ module.exports = function( grunt ) {
 				stripBanners: true
 			},
 			js: {
-				src: [ 'src/<%= pkg.name %>.js' ],
+				src: 'src/<%= pkg.name %>.js',
 				dest: 'app/js/<%= pkg.name %>.js'
-			},
-			css: {
-				src: [
-					'build/css/init.css',
-					'build/css/playing-surface.css',
-					'build/css/clock-layout.css',
-					'build/css/card.css'
-				],
-				dest: 'app/css/<%= pkg.name %>.css'
 			},
 		},
 		uglify: {
@@ -45,21 +36,20 @@ module.exports = function( grunt ) {
 			},
 		},
 		compass: {
-			// TODO compass concat
-			// http://stackoverflow.com/questions/9293646/can-compass-merge-css-files
 			src: {
 				options: {
 					sassDir: 'src/sass',
-					cssDir: 'build/css',
 					imagesDir: 'src/sass',
+					cssDir: 'build/css',
 					environment: 'development'
 				}
 			},
 			app: {
 				options: {
 					sassDir: 'src/sass',
-					cssDir: 'build/css',
-					environment: 'production'
+					imagesDir: 'src/sass',
+					cssDir: 'app/css',
+					environment: 'development'
 				}
 			}
 		},
