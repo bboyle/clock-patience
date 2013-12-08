@@ -70,23 +70,31 @@ module.exports = function( grunt ) {
 		},
 		jshint: {
 			gruntfile: {
-				options: {
-					jshintrc: '.jshintrc'
-				},
-				src: 'Gruntfile.js'
+				options: { jshintrc: '.jshintrc' },
+				src: [
+					'Gruntfile.js',
+					'package.json',
+					'src/.jshintrc',
+					'.jshintrc',
+					'.jsbeautifyrc'
+				]
 			},
 			src: {
-				options: {
-					jshintrc: 'src/.jshintrc'
-				},
+				options: { jshintrc: 'src/.jshintrc' },
 				src: [ 'src/**/*.js' ]
 			},
 			app: {
-				options: {
-					jshintrc: 'src/.jshintrc'
-				},
+				options: { jshintrc: 'src/.jshintrc' },
 				src: [ 'app/**/*.js' ]
 			},
+		},
+		jsbeautifier: {
+			js: {
+				options: {
+					config: '.jsbeautifyrc',
+				},
+				src: [ 'src/**/*.js' ]
+			}
 		},
 		watch: {
 			gruntfile: {
@@ -95,7 +103,7 @@ module.exports = function( grunt ) {
 			},
 			srcJs: {
 				files: '<%= jshint.src.src %>',
-				tasks: [ 'jshint:src' ]
+				tasks: [ 'jsbeautifier:js', 'jshint:src' ]
 			},
 			srcCss: {
 				files: 'src/sass/*.scss',
@@ -120,6 +128,7 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 	grunt.loadNpmTasks( 'grunt-contrib-csslint' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
+	grunt.loadNpmTasks( 'grunt-jsbeautifier' );
 
 	// Default task.
 	grunt.registerTask( 'compile', [ 'clean', 'compass:src' ]);

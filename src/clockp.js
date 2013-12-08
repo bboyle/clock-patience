@@ -3,6 +3,6 @@ function handleDragStart() {
 }
 
 var cards = document.querySelectorAll( '.card' );
-[].forEach.call( cards, function( card ) {
+[].forEach.call( cards, function ( card ) {
 	card.addEventListener( 'dragstart', handleDragStart, false );
-});
+} );
