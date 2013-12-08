@@ -43,3 +43,5 @@ What I've learned
 |    4 | CSS3 transforms for the clock patience layout. Takes a 12 column table and rotates each cell into a clock shape.               |
 |    5 | Initial SASS (scss) support using compass (via grunt) to compile stylesheets. I used sass variables for the suit colours.      |
 |    6 | Exploring CSS text formatting and layout to produce the visual layout of cards (layout and orientation of suit symbols).       |
+|    - | (Long period of distraction with family, work and life)                                                                        |
+|    7 | Automatic formatting (clean up) of javascript using https://github.com/vkadam/grunt-jsbeautifier                               |
