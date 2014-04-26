@@ -40,30 +40,6 @@ body {
 /* line 3, ../../src/sass/_playing-surface.scss */
 body {
   background-color: #447821;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAAAYCAYAAADEQnB9AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEQAACxEBf2RfkQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKCSURBVHic7ZfbeYMwDIUl6jE6SQfq/hNUfUgAXY35CDRpjl5iZOlY2NafhL++P4W0MTkLjjAdI8QG9IdrdKqVrxkfi8xKMNUYy+fRhF5JWy/KlURnk8qcTi294GqPhg4JdoU1EecJvSf20ZvYlO7hSjLU93HR2gCA2GV+lDMs799v1hH/OA4ASfxsZ7v5Xb9731i+bAJA17cFgOzsONu0tBYA4K/NNHA4OCGz69kBBgMAYmwmCQDc3ADAIWukOji9hKaJ+wYAAAC+PgDgXGv2bYoWG+o8AAAAcBMAwOnWmOcrxzRUWbeLAAAAAAC4EgBtrqC6nHZCwuGvMwDAkrOmEAAQXQCAch8EQOMpqyQGSiYsaahNAgCq2aoILWgcAICSBACIiKjxXI0WzfN9idYJAAAAAAD59z0bAI2n25Oonpy/1s3i5kzYdTkA0J0EAII2AFD4dwKg8fwf+H5Y5fn5Bd2PdwAAAFhy1hTjAACU5IMAsP4Hvhfh72sp4NcBAKIBAADAyQBYfkKnEn5zNgoDAOokAGDbAID9AFDfwC5ViGgi4uEmBgC8FtmIKAYAJDUkuQCAHSoANP7IbqtdlF2AhEFSOQAAAFSaeycBgKA9D9s0JSeSNs56K9N786cAMNfTzAMA2fIAQB72egC4/4SOU+EiU7IPSXPOj9cCoNh4ACBfDwDYN/nEAGiDyvoj+AEAAAAA6EyeCICxBj5qAECprQcAgNUiGxHFAICLGvioAQClth4AAFaLbEQU+wcAeI0GPmoAQKmtBwCA1SIbEcWeAADv0cBHDQAotfUAALBaZCOi2AMAgAa+wgCAUlsPAACrRTYiijEa+DUMACi19eAdAfALhu2ghZHjHCEAAAAASUVORK5CYII=');
-  background-size: 100% auto;
-}
-
-/* line 8, ../../src/sass/_playing-surface.scss */
-body::before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABICAYAAADIzHiKAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEQAACxEBf2RfkQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM+SURBVHic7Z1BkpRAEEUTgxto6Cn0LHpS7+ItjNCda3GFwRBUQkIVlZ9+bwNN/ymyO+tVEb2ZYZomAwBN3vUuAADOg8AAwiAwgDAIDCAMAgMIg8AAwiAwgDAIDCAMAgMIg8AAwiAwgDAIDCAMAgMIg8AAwiAwgDAIDCAMAgMIg8AAwiAwgDAIDCAMAgMIg8AAwiAwgDBj7wIAXpkv3z4Ni5dD4Vi8hsDwCDZE2J38J/OH5dq535X8/yMCwxsWIhyZsF6uphB3yXW34JdrRuAGXH0sKmSi+bsm19mxai4IWXfP5gtCaoGd3eDotRaTK8PKjeAIPpiZDZ+/fhz3Qgffi+ZVGhXNZxC8Rs3eWBkEj+af0oM3+dHM3js37PnBago+n2dtlGLN3lgZ5k00L9mD0cw+7IWcG9Ko+vmjPYjWHM237FnPeXZXz27pwVrgKoPuZKL5TIJH8wj+OvPGu9asB6VH6LOFRvNPa9TRv5vPe8ri1RDN3y14NF9znqXqmbcDZyg0+p5io2oIHs0/VfBofn2cFtlp4/X6vHQsXfsbzO+Ov9yBX6lRV/IZPs98nkHwrWN0YpdkKV2L5M+Mf6XmaP5SDfMO3HPlziDE2bFaLghnG3t0khzZDbzxa9TQMp9B8Bo1e2NNR3/E6im4l4/sBvN5zS9+Cua9Grx795xcNQWfz7PKIlfz+kcss7IsLVfi9W5Qc/xHNGpnrAyCR/NP6UHXmkcz+9P4hjUno1KjovmWcvVcEHoKHs3LzZvRzH4Fikfwc3kEP/dezXzWHng17OZHM/vt3JBG1c+3WhAy1NxiQVCaN9H85R6sd+CaX3w0r9SoDLJkqjn6nqLg3rVugm89Ql8edCcTzWdaELo1qnLN3lhPEXw+v+3z/Pj+c5m7hdIjtG1cy9ooBK9fszdW05p7SKCMtwNnWImj+ZqTsacsXv7QgoAIr8FyB64xubbysoIjAWRn3oGb7jaIANCGYZpwC0AV/jMDgDAIDCAMAgMIg8AAwiAwgDAIDCAMAgMIg8AAwiAwgDAIDCAMAgMIg8AAwiAwgDAIDCAMAgMIg8AAwiAwgDAIDCAMAgMIg8AAwiAwgDAIDCAMAgMI8w8eO9V/DPdtOwAAAABJRU5ErkJggg==');
-  background-size: 100% auto;
-}
-
-/* line 17, ../../src/sass/_playing-surface.scss */
-body::after {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('data:image/png;base64,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');
-  background-size: 100% auto;
 }
 
 /* line 1, ../../src/sass/_clock-layout.scss */
@@ -102,130 +78,129 @@ th {
   -ms-transform: translateX(50%);
   -o-transform: translateX(50%);
   transform: translateX(50%);
-  /* note: Queen (12) stays put */
 }
 /* line 31, ../../src/sass/_clock-layout.scss */
 .clock td, .clock th {
   position: absolute;
-  -webkit-transform-origin: 50% 15em 0 true;
-  -moz-transform-origin: 50% 15em;
-  -ms-transform-origin: 50% 15em 0 true;
-  -o-transform-origin: 50% 15em 0 true;
-  transform-origin: 50% 15em 0 true;
+  -webkit-transform-origin: 50% 15em 0 true 50%;
+  -moz-transform-origin: 50% 15em 0 true 50%;
+  -ms-transform-origin: 50% 15em 0 true 50%;
+  -o-transform-origin: 50% 15em 0 true 50%;
+  transform-origin: 50% 15em 0 true 50%;
 }
-/* line 42, ../../src/sass/_clock-layout.scss */
+/* line 40, ../../src/sass/_clock-layout.scss */
 .clock td {
   border: none;
 }
-/* line 48, ../../src/sass/_clock-layout.scss */
-.clock th:nth-child(1),
-.clock td:nth-child(1) {
+/* line 47, ../../src/sass/_clock-layout.scss */
+.clock td:nth-child(1),
+.clock th:nth-child(1) {
   -webkit-transform: rotate(30deg);
   -moz-transform: rotate(30deg);
   -ms-transform: rotate(30deg);
   -o-transform: rotate(30deg);
   transform: rotate(30deg);
 }
-/* line 52, ../../src/sass/_clock-layout.scss */
-.clock th:nth-child(2),
-.clock td:nth-child(2) {
+/* line 47, ../../src/sass/_clock-layout.scss */
+.clock td:nth-child(2),
+.clock th:nth-child(2) {
   -webkit-transform: rotate(60deg);
   -moz-transform: rotate(60deg);
   -ms-transform: rotate(60deg);
   -o-transform: rotate(60deg);
   transform: rotate(60deg);
 }
-/* line 56, ../../src/sass/_clock-layout.scss */
-.clock th:nth-child(3),
-.clock td:nth-child(3) {
+/* line 47, ../../src/sass/_clock-layout.scss */
+.clock td:nth-child(3),
+.clock th:nth-child(3) {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-/* line 60, ../../src/sass/_clock-layout.scss */
-.clock th:nth-child(4),
-.clock td:nth-child(4) {
+/* line 47, ../../src/sass/_clock-layout.scss */
+.clock td:nth-child(4),
+.clock th:nth-child(4) {
   -webkit-transform: rotate(120deg);
   -moz-transform: rotate(120deg);
   -ms-transform: rotate(120deg);
   -o-transform: rotate(120deg);
   transform: rotate(120deg);
 }
-/* line 64, ../../src/sass/_clock-layout.scss */
-.clock th:nth-child(5),
-.clock td:nth-child(5) {
+/* line 47, ../../src/sass/_clock-layout.scss */
+.clock td:nth-child(5),
+.clock th:nth-child(5) {
   -webkit-transform: rotate(150deg);
   -moz-transform: rotate(150deg);
   -ms-transform: rotate(150deg);
   -o-transform: rotate(150deg);
   transform: rotate(150deg);
 }
-/* line 68, ../../src/sass/_clock-layout.scss */
-.clock th:nth-child(6),
-.clock td:nth-child(6) {
+/* line 47, ../../src/sass/_clock-layout.scss */
+.clock td:nth-child(6),
+.clock th:nth-child(6) {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-/* line 72, ../../src/sass/_clock-layout.scss */
-.clock th:nth-child(7),
-.clock td:nth-child(7) {
+/* line 47, ../../src/sass/_clock-layout.scss */
+.clock td:nth-child(7),
+.clock th:nth-child(7) {
   -webkit-transform: rotate(210deg);
   -moz-transform: rotate(210deg);
   -ms-transform: rotate(210deg);
   -o-transform: rotate(210deg);
   transform: rotate(210deg);
 }
-/* line 76, ../../src/sass/_clock-layout.scss */
-.clock th:nth-child(8),
-.clock td:nth-child(8) {
+/* line 47, ../../src/sass/_clock-layout.scss */
+.clock td:nth-child(8),
+.clock th:nth-child(8) {
   -webkit-transform: rotate(240deg);
   -moz-transform: rotate(240deg);
   -ms-transform: rotate(240deg);
   -o-transform: rotate(240deg);
   transform: rotate(240deg);
 }
-/* line 80, ../../src/sass/_clock-layout.scss */
-.clock th:nth-child(9),
-.clock td:nth-child(9) {
+/* line 47, ../../src/sass/_clock-layout.scss */
+.clock td:nth-child(9),
+.clock th:nth-child(9) {
   -webkit-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   -o-transform: rotate(270deg);
   transform: rotate(270deg);
 }
-/* line 84, ../../src/sass/_clock-layout.scss */
-.clock th:nth-child(10),
-.clock td:nth-child(10) {
+/* line 47, ../../src/sass/_clock-layout.scss */
+.clock td:nth-child(10),
+.clock th:nth-child(10) {
   -webkit-transform: rotate(300deg);
   -moz-transform: rotate(300deg);
   -ms-transform: rotate(300deg);
   -o-transform: rotate(300deg);
   transform: rotate(300deg);
 }
-/* line 88, ../../src/sass/_clock-layout.scss */
-.clock th:nth-child(11),
-.clock td:nth-child(11) {
+/* line 47, ../../src/sass/_clock-layout.scss */
+.clock td:nth-child(11),
+.clock th:nth-child(11) {
   -webkit-transform: rotate(330deg);
   -moz-transform: rotate(330deg);
   -ms-transform: rotate(330deg);
   -o-transform: rotate(330deg);
   transform: rotate(330deg);
 }
-/* line 93, ../../src/sass/_clock-layout.scss */
-.clock th:nth-child(12),
-.clock td:nth-child(12) {
-  -webkit-transform: rotate(0);
-  -moz-transform: rotate(0);
-  -ms-transform: rotate(0);
-  -o-transform: rotate(0);
-  transform: rotate(0);
+/* line 47, ../../src/sass/_clock-layout.scss */
+.clock td:nth-child(12),
+.clock th:nth-child(12) {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
 }
-/* line 97, ../../src/sass/_clock-layout.scss */
+/* line 54, ../../src/sass/_clock-layout.scss */
 .clock th:nth-child(13),
 .clock td:nth-child(13) {
   -webkit-transform: translateY(12.5em);
@@ -303,7 +278,7 @@ th {
 .card::after {
   content: none;
   font-size: .4em;
-  width: 1em;
+  width: 1.1em;
   padding: .1em;
   position: absolute;
   word-wrap: break-word;
@@ -320,6 +295,10 @@ th {
 .card::after {
   bottom: 0;
   right: 0;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
