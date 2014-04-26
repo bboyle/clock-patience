@@ -90,6 +90,7 @@ module.exports = function( grunt ) {
 				src: [
 					'Gruntfile.js',
 					'package.json',
+					'src/.csslintrc',
 					'src/.jshintrc',
 					'.jshintrc',
 					'.jsbeautifyrc'
