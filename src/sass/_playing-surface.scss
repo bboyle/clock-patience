@@ -2,24 +2,4 @@ $greenSurface: #447821;
 
 body {
 	background-color: $greenSurface;
-	background-image: inline-image("image/green-background.png");
-	background-size: 100% auto;
-}
-body::before {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background-image: inline-image("image/green-background3.png");
-	background-size: 100% auto;
-}
-body::after {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background-image: inline-image("image/green-background7.png");
-	background-size: 100% auto;
 }

@@ -24,7 +24,11 @@ module.exports = function( grunt ) {
 			html: {
 				src: 'src/index.html',
 				dest: 'app/index.html'
-			}
+			},
+			css: {
+				src: 'build/css/<%= pkg.name %>.css',
+				dest: 'app/css/<%= pkg.name %>.css'
+			},
 		},
 		concat: {
 			options: {
@@ -34,10 +38,6 @@ module.exports = function( grunt ) {
 			js: {
 				src: 'src/<%= pkg.name %>.js',
 				dest: 'app/js/<%= pkg.name %>.js'
-			},
-			css: {
-				src: 'build/css/<%= pkg.name %>.css',
-				dest: 'app/css/<%= pkg.name %>.css'
 			},
 		},
 		uglify: {
@@ -157,7 +157,7 @@ module.exports = function( grunt ) {
 
 	// Default task.
 	grunt.registerTask( 'compile', [ 'compile-css', 'compile-js' ]);
-	grunt.registerTask( 'compile-css', [ 'compass:src', 'csslint:src', 'concat:css' ]);
+	grunt.registerTask( 'compile-css', [ 'compass:src', 'csslint:src', 'copy:css' ]);
 	grunt.registerTask( 'compile-js', [ 'jsbeautifier:js', 'jshint:src', 'uglify' ]);
 	grunt.registerTask( 'produce', [ 'clean', 'compile', 'copy:html' ]);
 
