@@ -11,11 +11,21 @@ module.exports = function( grunt ) {
 			'<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
 			'* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
 			' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
+
+
 		// Task configuration.
 		clean: {
 			build: [ 'build' ]
 		},
+
+
 		// production pipeline tasks
+		copy: {
+			html: {
+				src: 'src/index.html',
+				dest: 'app/index.html'
+			}
+		},
 		concat: {
 			options: {
 				banner: '<%= banner %>',
@@ -24,6 +34,10 @@ module.exports = function( grunt ) {
 			js: {
 				src: 'src/<%= pkg.name %>.js',
 				dest: 'app/js/<%= pkg.name %>.js'
+			},
+			css: {
+				src: 'build/css/<%= pkg.name %>.css',
+				dest: 'app/css/<%= pkg.name %>.css'
 			},
 		},
 		uglify: {
@@ -53,6 +67,8 @@ module.exports = function( grunt ) {
 				}
 			}
 		},
+
+
 		// code quality tasks
 		csslint: {
 			src: {
@@ -96,18 +112,25 @@ module.exports = function( grunt ) {
 				src: [ 'src/**/*.js' ]
 			}
 		},
+
+
+		// automation
 		watch: {
 			gruntfile: {
 				files: '<%= jshint.gruntfile.src %>',
 				tasks: [ 'jshint:gruntfile' ]
 			},
+			srcHtml: {
+				files: 'src/index.html',
+				tasks: [ 'copy:html' ]
+			},
 			srcJs: {
 				files: '<%= jshint.src.src %>',
-				tasks: [ 'jsbeautifier:js', 'jshint:src' ]
+				tasks: [ 'compile-js' ]
 			},
 			srcCss: {
 				files: 'src/sass/*.scss',
-				tasks: [ 'compass:src', 'csslint:src' ]
+				tasks: [ 'compile-css' ]
 			},
 			appJs: {
 				files: '<%= jshint.app.src %>',
@@ -122,6 +145,7 @@ module.exports = function( grunt ) {
 
 	// These plugins provide necessary tasks.
 	grunt.loadNpmTasks( 'grunt-contrib-clean' );
+	grunt.loadNpmTasks( 'grunt-contrib-copy' );
 	grunt.loadNpmTasks( 'grunt-contrib-concat' );
 	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
 	grunt.loadNpmTasks( 'grunt-contrib-compass' );
@@ -131,10 +155,12 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-jsbeautifier' );
 
 	// Default task.
-	grunt.registerTask( 'compile', [ 'clean', 'compass:src' ]);
+	grunt.registerTask( 'compile', [ 'compile-css', 'compile-js' ]);
+	grunt.registerTask( 'compile-css', [ 'compass:src', 'csslint:src', 'concat:css' ]);
+	grunt.registerTask( 'compile-js', [ 'jsbeautifier:js', 'jshint:src', 'uglify' ]);
+	grunt.registerTask( 'produce', [ 'clean', 'compile', 'copy:html' ]);
+
 	grunt.registerTask( 'test', [ 'csslint', 'jshint' ]);
-	grunt.registerTask( 'produce', [ 'clean', 'compass:app', 'concat' ]);
-	// TODO uglify and pass jshint
 	grunt.registerTask( 'quality-control', [ 'csslint:app', 'jshint:app' ]);
 	grunt.registerTask( 'default', [ 'compile', 'test', 'produce', 'quality-control' ]);
 
