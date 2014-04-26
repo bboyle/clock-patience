@@ -1,3 +1,5 @@
+[![Dependency Status](https://david-dm.org/bboyle/clock-patience.svg)](https://david-dm.org/bboyle/clock-patience)
+
 Clock Patience web app
 ======================
 
@@ -20,8 +22,8 @@ TODO
 ----
 
 * UI design
-  * -clock layout-
-  * -symbols for suits (use Unicode)-
+  * ~~clock layout~~
+  * ~~symbols for suits (use Unicode)~~
   * [cicada background](http://designfestival.com/the-cicada-principle-and-why-it-matters-to-web-designers/) for card backs/playing surface
   * card symmetry (use reflections?)
   * flip over card (3D transform?)

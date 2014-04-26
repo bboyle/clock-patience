@@ -1,7 +1,7 @@
 {
   "name": "clockp",
   "title": "Clock patience",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": {
     "name": "Ben Boyle"
   },
@@ -12,16 +12,15 @@
     "test": "test"
   },
   "devDependencies": {
-    "grunt": "*",
-    "grunt-contrib-clean": "*",
-    "grunt-contrib-compass": "*",
-    "grunt-contrib-concat": "*",
-    "grunt-contrib-csslint": "*",
-    "grunt-contrib-jshint": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-jsbeautifier": "*",
-    "grunt-rcukes": "*"
+    "grunt": "~0.4.4",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-compass": "~0.7.2",
+    "grunt-contrib-concat": "~0.4.0",
+    "grunt-contrib-csslint": "~0.4.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-jsbeautifier": "~0.2.7"
   },
   "scripts": {
     "test": "grunt test"
